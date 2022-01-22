@@ -25,3 +25,13 @@ The FPGA design first has a UART receiver module that receives the packets sent 
                                                        *Figure2: The submodules of the motor controller module.*
 
 Each motor controller module has an 8 bit register that stores the number of the note that the motor needs to be playing at that time. Then the LUT produces the integer that needs to divide the BASYS3’s clock frequency, i.e. 100MHZ, to generate the frequency of the note that needs to be played at that instant. And the square wave generator module generates a square wave with that frequency. And finally all the motor controller outputs are connected to the step pins of the A4988 drivers.
+
+# Some example pieces
+
+[Tetris Main Theme](https://drive.google.com/file/d/12z67MSqN0MBoHgMRjJ63SJT2uN7FVeo-/view?usp=sharing)
+
+[Turkish March](https://drive.google.com/file/d/12p4od7fqtwUkc7s8LXOtwIRg9ugmlN_u/view?usp=sharing)
+
+[Flight of the Bumblebee](https://drive.google.com/file/d/12lnXPESC-eqdMB-Z62UgkS5ee60mwVRz/view?usp=sharing)
+
+[Rachmaninoff: Piano concerto No. 2 in C Minor, Op. 18: I. Moderato](https://drive.google.com/file/d/12yM_-F1ln2KMe6i1MxQvevgEpnOEFfw3/view?usp=sharing)
