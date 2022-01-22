@@ -7,7 +7,7 @@ An instrument that plays MIDI files using stepper motors.
 &nbsp;
 &nbsp;
 
-# How does it work
+# How Does It Work
 
 
 The theory behind playing the notes using stepper motors is that they vibrate, and thus, produce the note at the frequency that they are stepping at. So essentially what the design does to play notes is stepping a motor at the frequency of the note that needs to be played at that time instant. 
@@ -26,7 +26,7 @@ The FPGA design first has a UART receiver module that receives the packets sent 
 
 Each motor controller module has an 8 bit register that stores the number of the note that the motor needs to be playing at that time. Then the LUT produces the integer that needs to divide the BASYS3’s clock frequency, i.e. 100MHZ, to generate the frequency of the note that needs to be played at that instant. And the square wave generator module generates a square wave with that frequency. And finally all the motor controller outputs are connected to the step pins of the A4988 drivers.
 
-# Some example pieces
+# Some Example Pieces
 
 [Tetris Main Theme](https://drive.google.com/file/d/12z67MSqN0MBoHgMRjJ63SJT2uN7FVeo-/view?usp=sharing)
 
