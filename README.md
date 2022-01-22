@@ -16,7 +16,7 @@ A4988 stepper motor drives are used in the design to control the motors. Also a 
 MIDI has many different packets but the design makes use of only 2 particular ones: Note On and Note Off. They are 3 bytes long each and in the form of: 1001CCCC 0NNNNNNN 0VVVVVVV and 1000CCCC 0NNNNNNN 0VVVVVVV respectively. Here Cs denotes the channel, i.e. for which instrument this command is intended, which is in this case which motor, Ns denote the note number and Vs denote the velocity of the note, i.e. loudness. As the design has no use for the velocity, it only looks for the first 2 bytes of these commands.
 
  ![a](https://user-images.githubusercontent.com/98234434/150654531-4562a342-6f59-47f0-b334-4e5ad5a2dda5.png)
-                                                      *Figure1: The schematic of the FPGA design.*
+                                                            *Figure1: The schematic of the FPGA design.*
 
 The FPGA design first has a UART receiver module that receives the packets sent from the computer. Then the packet shifter module sticks the two consecutive packets together to assemble a possible command. Then the command executer module checks if the possible command is valid, and if it is then it executes it by writing into the register of the related motor controller module.
 
