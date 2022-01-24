@@ -10,7 +10,7 @@ An instrument that plays MIDI files using stepper motors.
 # How Does It Work
 
 
-The theory behind playing the notes using stepper motors is that they vibrate, and thus, produce the note at the frequency that they are stepping at. So essentially what the design does to play notes is stepping a motor at the frequency of the note that needs to be played at that time instant. 
+The theory behind playing the notes using stepper motors is that they vibrate, and thus, produce the note at the frequency they are stepping at. So essentially what the design does to play notes is, stepping a motor at the frequency of the note that needs to be played at that time instant. 
 A4988 stepper motor drives are used to control the motors and a BASYS3 FPGA as the controller. Also a 5V-3.3V logic converter is used since the drivers use 5V high while BASYS3 uses 3.3V high. 1N138 optical isolator is also used in a receiver circuit to read the incoming packets from the MIDI cable and decreasing them to 3.3V in the process. 
 
 MIDI has many different packets but the design makes use of only 2 particular ones: Note On and Note Off. They are 3 bytes long each and in the form of: 1001CCCC 0NNNNNNN 0VVVVVVV and 1000CCCC 0NNNNNNN 0VVVVVVV respectively. Here Cs denotes the channel, i.e. for which instrument this command is intended, which is in this case which motor, Ns denote the note number and Vs denote the velocity of the note, i.e. loudness. As the design has no use for the velocity, it only looks for the first 2 bytes of these commands.
