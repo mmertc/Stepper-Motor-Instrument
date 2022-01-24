@@ -42,3 +42,5 @@ Each motor controller module has an 8 bit register that stores the number of the
 [Flight of the Bumblebee](https://drive.google.com/file/d/12lnXPESC-eqdMB-Z62UgkS5ee60mwVRz/view?usp=sharing)
 
 [Rachmaninoff: Piano concerto No. 2 in C Minor, Op. 18: I. Moderato](https://drive.google.com/file/d/12yM_-F1ln2KMe6i1MxQvevgEpnOEFfw3/view?usp=sharing)
+
+P.S. Grinding noise that occasionally happens is because some notes hit the resonance frequency of the motors. It can be fixed simply by setting those notes one octave higher, but it is too much work to do for each one of them.  ¯\\\_(ツ)_/¯ 
